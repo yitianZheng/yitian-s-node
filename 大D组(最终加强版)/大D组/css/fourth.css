@@ -1,0 +1,802 @@
+/*
+* @Author: Marte
+* @Date:   2017-04-11 14:17:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-04-15 21:45:15
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+#background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*右边的切换*/
+#rightbox {
+    position: absolute;
+    left: 94%;
+    top: 0;
+    height: 100%;
+    width: 6%;
+    opacity: 1;
+}
+
+#rightbox form {
+    background:#595959;
+    opacity: .19;
+    width: 100%;
+    height: 100%;
+}
+
+#rightbox img {
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    width: 80%;
+    height: 9%;
+
+}
+
+#next-page-button {
+    height: 100%;
+    width: 100%;
+}
+
+/*睁眼特效*/
+#mask {
+    //display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#mask-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    animation: maskmove 13s;
+    animation-fill-mode: forwards;
+}
+
+#mask-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    animation: maskmove 13s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes maskmove {
+    0% { height: 50%; }
+    17.5% { height: 30%; }
+    22.5% { height: 30%; }
+    35% { height: 50%; }
+    40% { height: 50%; }
+    57.5% { height: 25%; }
+    62.5% { height: 25%; }
+    80% { height: 50%;  }
+    82% { height: 50%; }
+    100% { height: 0%; }
+}
+
+
+#fuzzy-third {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#fuzzy-fourth {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+/*文字特效*/
+/*梦境中*/
+#dream-box {
+    position: absolute;
+    left: 42%;
+    top: 85%;
+    height: 8%;
+    width: 70%;
+    transform-origin: 0 0;
+    transform: rotate(-15deg);
+    display: none;
+    //display: none;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dreamboxmove {
+    0% { left: 42%;  top: 85%;  }
+    100% { top: 130%;  left: -42%;}
+}
+
+
+#whiteline-text {
+    display: inline-block;
+    height: 80%;
+    width: 40%;
+
+}
+#dream-love-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+#dream-love {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    bottom: -90%;
+    animation: dreamlovemove 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes dreamlovemove {
+    0% { bottom: -90%;  }
+    100% { bottom: -10%;  }
+}
+
+#whiteline {
+    width: 100%;
+}
+
+/*梦白*/
+#dreamwhite {
+    //display: none;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    height: 200%;
+    width: 15%;
+    cursor: pointer;
+   /* animation: dreamwhitedisappear 1.5s;
+    animation-fill-mode: forwards; */
+}
+@-webkit-keyframes dreamwhitedisappear {
+    0% { opacity: 1;  }
+    100% { opacity: 0; display: none; }
+}
+@-webkit-keyframes realtywhiteappear {
+    0% { display: none; opacity: 0;  }
+    100% { opacity: 1; display: inline-block; }
+}
+/*黑线和上海*/
+#blackline-text{
+    display: inline-block;
+    position: relative;
+    top: -30%;
+    left: -5%;
+    height: 80%;
+    width: 40%;
+}
+
+#shanghai-box {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    top: -20%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+#shang-hai {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    bottom: 110%;
+    animation: shanghaimove 1.5s;
+    animation-fill-mode: forwards;
+     animation-delay: 3s;
+}
+
+@-webkit-keyframes shanghaimove {
+    0% { bottom: 110%;  }
+    100% { bottom: 10%;  }
+}
+#blackline {
+    width: 60%;
+}
+
+/*现实中*/
+#realty-box {
+    position: absolute;
+    left: 42%;
+    top: 85%;
+    height: 8%;
+    width: 70%;
+    transform-origin: 0 0;
+    transform: rotate(-15deg);
+    display: none;
+    animation-fill-mode: forwards;
+
+}
+@-webkit-keyframes boxmove {
+    0% { left: 100%;  top: 50%;  }
+    100% { left: 42%; top: 85%;}
+}
+#overlooking-whiteline-text {
+    display: inline-block;
+    height: 80%;
+    width: 40%;
+}
+
+#overlooking-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#overlooking {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    bottom: -90%;
+    animation: overlookingmove 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes overlookingmove {
+    0% { bottom: -90%;  }
+    100% { bottom: -20%;  }
+}
+
+#realtywhite {
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    height: 200%;
+    width: 15%;
+}
+
+#signUp-box {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    top: -20%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+#signUp {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    bottom: 110%;
+    animation: sighupmove 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+@-webkit-keyframes sighupmove {
+    0% { bottom: 110%;  }
+    100% { bottom: 0%;  }
+}
+
+/*导航栏部分*/
+/*上拉那里闪烁*/
+@-webkit-keyframes navflashing
+{
+　　 0% { opacity: .1; }
+　　 20% { opacity: 1; }
+    40% {opacity: .5; }
+    60% { opacity: 1; }
+    80% { opacity: .7; }
+    100% { opacity: 1; }
+}
+.nav-button {
+    position: absolute;
+    top: 90%;
+    left: 2%;
+    width: 14%;;
+    height: 8.84%;
+    animation: navflashing 2.5s;
+    animation-iteration-count: infinite;//无限循环播放
+}
+.nav {
+    display: none;
+}
+.nav-BGimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.left-hand {
+    position: absolute;
+    top: 93%;
+    left: 22%;
+    width: 8%;
+    height: 20%;
+    animation: seeze 2s;
+
+}
+
+/*左手抓的动画*/
+@-webkit-keyframes seeze
+{
+    0% { top: 100%;}
+    50% { top: 87%; }
+    100% { top: 93%; }
+}
+
+/*头和右手的动画*/
+@-webkit-keyframes elicit
+{
+    0% { top: 100%;}
+    50% { top: 73%; }
+    100% { top: 74%; }
+
+}
+
+.head-right {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 42.5%;
+    height: 26%;
+    animation: elicit 2s;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.left-eye {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    width: 2.5%;
+    display: block;
+    height: 6.9%;
+    animation: follow 2s;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+.right-eye {
+    position: absolute;
+    top: 100%;
+    left: 50.5%;
+    width: 2.5%;
+    height: 6.9%;
+    display: block;
+    animation: follow 2s;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+/*向前看眼睛的动画*/
+@-webkit-keyframes follow
+{
+    0% { top: 100%;}
+    50% { top: 86%; }
+    100% { top: 87%; }
+
+}
+
+/*向上看的眼睛*/
+.left-eye-top {
+    position: absolute;
+    top: 88.8%;
+    left: 45.5%;
+    width: 1.5%;
+    height: 3.8%;
+    opacity: .5;
+    display: none;
+     animation: left-top-move 1.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.right-eye-top {
+    position: absolute;
+    top: 88.8%;
+    left: 51%;
+    width: 1.5%;
+    height: 3.8%;
+    opacity: .5;
+    display: none;
+    animation: right-top-move 1.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes left-top-move
+{
+    0% { top: 88.8%; left: 45.5%; opacity: 0;}
+
+    100% { top: 78%; left: 44.5%; opacity: 1;}
+
+}
+@-webkit-keyframes right-top-move
+{
+    0% { top: 88.8%; left: 51%; opacity: 0;}
+
+    100% { top: 78%;left: 51.5%; opacity: 1; }
+
+}
+.introduce-shanghai {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 13%;
+    height: 14%;
+
+    animation: titlemove 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.introduce-text {
+    position: absolute;
+    top: 23%;
+    left: 6%;
+    width: 30%;
+    height: 23%;
+    animation: textemove 2s;
+    opacity: 0;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+
+}
+
+
+/*介绍文字移动*/
+@-webkit-keyframes titlemove {
+
+    0% { top: 20%; opacity: 0; }
+    100% { top: 6%; opacity: 1; }
+
+}
+@-webkit-keyframes textemove {
+
+    0% { top: 40%; opacity: 0; }
+    100% { top: 20%; opacity: 1; }
+
+}
+/*点击其他地方返回本页*/
+#return-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor:pointer
+
+}
+
+/*导航栏按钮 逸恬*/
+ .icon {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 40%;
+    left: 10%;
+    display: none;
+}
+
+.navbox {
+    /*display: inline-block;*/
+    position: relative;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    width: 6%;
+    height: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 2px solid white;
+    text-align: center;
+
+    display: none; /*隐藏导航框*/
+}
+
+.navbox1 {
+    top: 32%;
+    left: 10%;
+}
+
+.navbox2 {
+    top: 12%;
+    left: 19%;
+}
+
+.navbox3 {
+    top: 1%;
+    left: 32%;
+}
+
+.navbox4 {
+    top: -3%;
+    left: 45%;
+}
+
+.navbox5 {
+    top: 1%;
+    left: 58%;
+}
+
+.navbox6 {
+    top: 12%;
+    left: 71%;
+}
+
+.navbox7 {
+    top: 32%;
+    left: 80%;
+}
+
+.navbox span {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.navbox span.bot {
+    border-width: 5px;
+    border-style: solid dashed dashed;
+    border-color: white transparent transparent;
+    left: 20%;
+    bottom: -15%;
+}
+
+.navbox span.top {
+    border-width: 10px;
+    border-style: solid dashed dashed;
+    border-color: white transparent transparent;
+    left: 35%;
+    bottom: -55%;  /*绘制导航框倒三角*/
+}
+
+.circlebox1 {
+    position: fixed;
+    bottom: 8%;
+    left: 17%;
+}
+
+.circlebox2 {
+    position: fixed;
+    bottom: 24%;
+    left: 24%;
+}
+
+.circlebox3 {
+    position: fixed;
+    bottom: 33%;
+    left: 34%;
+}
+
+.circlebox4 {
+    position: fixed;
+    bottom: 36%;
+    left: 44%;
+}
+
+.circlebox5 {
+    position: fixed;
+    bottom: 33%;
+    left: 54%;
+}
+
+.circlebox6 {
+    position: fixed;
+    bottom: 24%;
+    left: 64%;
+}
+
+.circlebox7 {
+    position: fixed;
+    bottom: 8%;
+    left: 71%;
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: inline-block;
+    text-align: center;
+    opacity: 0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;/*绘制外圆*/
+}
+
+.smallcircle {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    top: 8px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    text-align: center;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;/*绘制内圆*/
+}
+
+/*.origin {
+    position: fixed;
+    bottom: -132%;
+    left: 170px;
+    width: 1200px;
+    height: 1200px;
+    border: 2px solid white;
+    -moz-border-radius: 600px;
+    -webkit-border-radius: 600px;
+    border-radius: 600px;
+}*/
+
+.circle img {
+    width: 67px;
+    height: 60px;
+    position: absolute;
+}
+
+.circle1 {
+    bottom: 0
+    left: 5%;
+    animation: spin1 1s linear;
+    animation-delay: 0s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle1 img {
+    left: 2px;
+    top: 5px;
+    transform: rotate(-50deg);
+}
+
+.circle2 {
+    top: 28%;
+    left: 6%;
+    animation: spin1 1s linear;
+    animation-delay: 0.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle2 img {
+    left: 8px;
+    top: 12px;
+    transform: rotate(-35deg);
+}
+
+.circle3 {
+    top: 15%;
+    left: 11%;
+    animation: spin1 1s linear;
+    animation-delay: 1s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle3 img {
+    left: 25px;
+    top: 8px;
+    width: 34px;
+    height: 65px;
+    transform: rotate(-50deg);
+}
+
+.circle4 {
+    top: 10%;
+    left: 18%;
+    animation: spin1 1s linear;
+    animation-delay: 1.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle4 img {
+    left: 6px;
+    top: 18px;
+    transform: rotate(0deg);
+}
+
+.circle5 {
+    top: 15%;
+    right: -24%;
+    animation: spin1 1s linear;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle5 img {
+    left: 8px;
+    top: 12px;
+    transform: rotate(18deg);
+}
+
+.circle6 {
+    top: 28%;
+    right: -28%;
+    animation: spin1 1s linear;
+    animation-delay: 2.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle6 img {
+    left: 12px;
+    top: 10px;
+    width: 52px;
+    height: 60px;
+    transform: rotate(35deg);
+}
+
+.circle7 {
+    top: 50%;
+    right: -30%;
+    animation: spin1 1s linear;
+    animation-delay: 3s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle7 img {
+    width: 60px;
+    height: 65px;
+    left: 10px;
+    top: 9px;
+    transform: rotate(-35deg);
+}
+
+@-webkit-keyframes spin1 {
+    to {
+        opacity: 1
+    }
+}
+
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*.smallcircle:hover {
+    background-color: white;
+    opacity: 0.5;
+}*/
+
+ /*导航栏部分结束*/

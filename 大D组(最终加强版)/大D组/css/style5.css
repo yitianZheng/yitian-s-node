@@ -1,0 +1,847 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	height: 100%;
+	overflow: hidden;
+	color: white;
+	letter-spacing: 3px;
+	text-align: center;
+	font-size: 140%;
+} 
+
+.check {
+    position: absolute;
+    width: 60%;
+    height: 15%;
+}
+
+#checkedsuccess {
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    width: 25%;
+    height: 40%;
+}
+#checkedsuccess a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.button-round {
+    border-radius: 40px;
+}
+
+.button {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    border: none;
+    background: none;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button > span {
+    vertical-align: middle;
+}
+
+.button-start {
+    width: 20%;
+    padding: 1.5% 2%;
+}
+
+.button-start.button-inverted {
+    color: #7986cb;
+}
+
+.button-start:before,
+.button-start:after {
+    content: '';
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
+}
+
+.button-start:before {
+    border: 2px solid #fff;
+}
+
+.button-start.button-inverted::before {
+    border-color: #fff;
+}
+
+.button-start:after {
+    background: #7986cb;
+}
+
+.button-start.button-inverted:after {
+    background: #fff;
+}
+
+.button-start:hover:before {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.button-start:before,
+.button-start:hover:after {
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+    transform: scale3d(0.7, 0.7, 1);
+}
+
+.button-start:hover:after {
+    background-color: #3f51b5;
+}
+
+.button-start.button-inverted:hover:after {
+    background-color: #fff;
+}
+.box {
+	height: 100%;
+}
+
+.container5 {
+	background-image: url(../img/20170406000816.png);
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 100%;
+}
+
+/*右边的切换*/
+#rightbox {
+    position: absolute;
+    left: 94%;
+    top: 0;
+    height: 100%;
+    width: 6%;
+    opacity: 1;
+}
+
+#rightbox form {
+    background:#595959;
+    opacity: .19;
+    width: 100%;
+    height: 100%;
+}
+
+#rightbox img {
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    width: 80%;
+    height: 9%;
+
+}
+
+#next-page-button {
+    height: 100%;
+    width: 100%;
+}
+
+
+.information {
+	position: absolute;
+	width: 60%;
+	height: 15%;
+}
+
+.name {
+ 	right: 0;
+	top: 25%;
+	/* Safari and Chrome: */
+	-webkit-animation-name: ease-in1;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+}
+
+input {
+	font-size: 30px;
+	font-weight: normal;
+	color: white;
+	border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: 2px solid white;/*设置下边框样式*/
+    text-align: center;
+    outline: medium; /*去掉输入框输入时的边框样式*/
+}
+
+.name input {
+	width: 60%;
+	height: 60%;
+    background: -webkit-linear-gradient(left, rgba(240,128,128,0.5), rgba(240,128,128,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(240,128,128,0.5), rgba(240,128,128,1))); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(240,128,128,0.5), rgba(240,128,128,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(240,128,128,0.5), rgba(240,128,128,1)); /* 标准的语法（必须放在最后） */
+}
+
+.gender {
+	left: 0;
+	top: 40%;
+	/* Safari and Chrome: */
+	-webkit-animation-name: ease-in2;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+}
+
+.gender input {
+	width: 65%;
+	height: 60%;
+    background: -webkit-linear-gradient(left, rgba(187,255,255,1), rgba(187,255,255,0.5));
+    background: -o-linear-gradient(right, rgba(187,255,255,1), rgba(187,255,255,0.5)));
+    background: -moz-linear-gradient(right, rgba(187,255,255,1), rgba(187,255,255,0.5));
+    background: linear-gradient(to right, rgba(187,255,255,1), rgba(187,255,255,0.5));
+}
+
+.telephone {
+	left: -60%;
+	top: 25%;
+}
+
+.add1 {
+	-webkit-animation-name: ease-in2;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+	left: 0!important;
+}
+
+.telephone input {
+	width: 50%;
+	height: 60%;
+	background: -webkit-linear-gradient(left, rgba(184,134,11,1), rgba(184,134,11,0.5));
+    background: -o-linear-gradient(right, rgba(184,134,11,1), rgba(184,134,11,0.5)));
+    background: -moz-linear-gradient(right, rgba(184,134,11,1), rgba(184,134,11,0.5));
+    background: linear-gradient(to right, rgba(184,134,11,1), rgba(184,134,11,0.5));
+}
+
+.number {
+	right: -60%;
+	top: 40%;
+}
+
+.add2 {
+	-webkit-animation-name: ease-in1;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+	right: 0!important;
+}
+
+.number input {
+	width: 50%;
+	height: 60%;
+	background: -webkit-linear-gradient(left, rgba(255,255,0,0.5), rgba(255,255,0,1));
+    background: -o-linear-gradient(right, rgba(255,255,0,0.5), rgba(255,255,0,1)));
+    background: -moz-linear-gradient(right, rgba(255,255,0,0.5), rgba(255,255,0,1));
+    background: linear-gradient(to right, rgba(255,255,0,0.5), rgba(255,255,0,1));
+}
+
+.address {
+	width: 60%;
+	height: 60%;
+	left: -60%;
+	top: 40%;
+}
+
+#city_4 {
+	width: 90%;
+	height: 14%;
+	background: -webkit-linear-gradient(left, rgba(255,193,37,1), rgba(255,193,37,0.5));
+    background: -o-linear-gradient(right, rgba(255,193,37,1), rgba(255,193,37,0.5)));
+    background: -moz-linear-gradient(right, rgba(255,193,37,1), rgba(255,193,37,0.5));
+    background: linear-gradient(to right, rgba(255,193,37,1), rgba(255,193,37,0.5));
+}
+
+select {
+	width: 15%;
+	height: 80%;
+	right: 0;
+	margin: 0 auto;
+	font-size: 25px;
+	border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: 2px solid white;
+    text-align: center;
+}
+
+.home {
+	right: -60%;
+	top: 25%;
+}
+
+.home input {
+	width: 75%;
+	height: 60%;
+	background: -webkit-linear-gradient(left, rgba(255,110,180,0.5), rgba(255,110,180,1));
+    background: -o-linear-gradient(right, rgba(255,110,180,0.5), rgba(255,110,180,1)));
+    background: -moz-linear-gradient(right, rgba(255,110,180,0.5), rgba(255,110,180,1));
+    background: linear-gradient(to right, rgba(255,110,180,0.5), rgba(255,110,180,1));
+}
+
+.click {
+	width: 12%;
+	height: 38%;
+	position: absolute;
+	top: 62%;
+	right: 17%;
+}
+
+#id_submit1 {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	opacity: 0;
+}
+
+#id_submit2 {
+	position: absolute;
+	left: 0;
+	top: 42%;
+	width: 100%;
+	height: 40%;
+	opacity: 1;
+}
+
+#id_submit3 {
+	position: absolute;
+	left: 0;
+	top: 84%;
+	width: 100%;
+	height: 40%;
+	opacity: 0;
+}
+
+@keyframes ease-in1 {
+	from {
+		right: -20%;
+		opacity: 0;
+	}
+	to {
+		right: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes ease-in2 {
+	from {
+		left: -20%;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+/*导航栏框架 楷羽*/
+/*上拉那里闪烁*/
+@-webkit-keyframes navflashing
+{
+　　 0% { opacity: .1; }
+　　 20% { opacity: 1; }
+    40% {opacity: .5; }
+    60% { opacity: 1; }
+    80% { opacity: .7; }
+    100% { opacity: 1; }
+}
+.nav-button {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 14%;;
+    height: 8.84%;
+    animation: navflashing 2.5s;
+    animation-iteration-count: infinite;//无限循环播放
+}
+.nav {
+    display: none;
+}
+.nav-BGimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.left-hand {
+    position: absolute;
+    top: 93%;
+    left: 22%;
+    width: 8%;
+    height: 20%;
+    animation: seeze 2s;
+
+}
+
+/*左手抓的动画*/
+@-webkit-keyframes seeze
+{
+    0% { top: 100%;}
+    50% { top: 87%; }
+    100% { top: 93%; }
+}
+
+/*头和右手的动画*/
+@-webkit-keyframes elicit
+{
+    0% { top: 100%;}
+    50% { top: 73%; }
+    100% { top: 74%; }
+
+}
+
+.head-right {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 42.5%;
+    height: 26%;
+    animation: elicit 2s;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.left-eye {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    width: 2.5%;
+    display: block;
+    height: 6.9%;
+    animation: follow 2s;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+.right-eye {
+    position: absolute;
+    top: 100%;
+    left: 50.5%;
+    width: 2.5%;
+    height: 6.9%;
+    display: block;
+    animation: follow 2s;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+/*向前看眼睛的动画*/
+@-webkit-keyframes follow
+{
+    0% { top: 100%;}
+    50% { top: 86%; }
+    100% { top: 87%; }
+
+}
+
+/*向上看的眼睛*/
+.left-eye-top {
+    position: absolute;
+    top: 88.8%;
+    left: 45.5%;
+    width: 1.5%;
+    height: 3.8%;
+    opacity: .5;
+    display: none;
+     animation: left-top-move 1.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.right-eye-top {
+    position: absolute;
+    top: 88.8%;
+    left: 51%;
+    width: 1.5%;
+    height: 3.8%;
+    opacity: .5;
+    display: none;
+    animation: right-top-move 1.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes left-top-move
+{
+    0% { top: 88.8%; left: 45.5%; opacity: 0;}
+
+    100% { top: 78%; left: 44.5%; opacity: 1;}
+
+}
+@-webkit-keyframes right-top-move
+{
+    0% { top: 88.8%; left: 51%; opacity: 0;}
+
+    100% { top: 78%;left: 51.5%; opacity: 1; }
+
+}
+.introduce-shanghai {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 15%;
+    height: 12%;
+
+    animation: titlemove 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.introduce-text {
+    position: absolute;
+    top: 23%;
+    left: 5%;
+    width: 30%;
+    height: 25%;
+    animation: textemove 2s;
+    opacity: 0;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+
+}
+
+
+/*介绍文字移动*/
+@-webkit-keyframes titlemove {
+
+    0% { top: 20%; opacity: 0; }
+    100% { top: 8%; opacity: 1; }
+
+}
+@-webkit-keyframes textemove {
+
+    0% { top: 40%; opacity: 0; }
+    100% { top: 23%; opacity: 1; }
+
+}
+/*点击其他地方返回本页*/
+#return-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor:pointer
+
+}
+
+/*导航栏按钮 逸恬*/
+ .icon {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 40%;
+    left: 10%;
+    display: none;
+}
+
+.navbox {
+    /*display: inline-block;*/
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    width: 6%;
+    height: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 2px solid white;
+    text-align: center;
+    display: none; /*隐藏导航框*/
+}
+
+.navbox1 {
+    top: 32%;
+    left: 10%;
+}
+
+.navbox2 {
+    top: 12%;
+    left: 19%;
+}
+
+.navbox3 {
+    top: 1%;
+    left: 32%;
+}
+
+.navbox4 {
+    top: -3%;
+    left: 45%;
+}
+
+.navbox5 {
+    top: 1%;
+    left: 58%;
+}
+
+.navbox6 {
+    top: 12%;
+    left: 71%;
+}
+
+.navbox7 {
+    top: 32%;
+    left: 80%;
+}
+
+.navbox span {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.navbox span.bot {
+    border-width: 5px;
+    border-style: solid dashed dashed;
+    border-color: white transparent transparent;
+    left: 20%;
+    bottom: -15%;
+}
+
+.navbox span.top {
+    border-width: 10px;
+    border-style: solid dashed dashed;
+    border-color: white transparent transparent;
+    left: 35%;
+    bottom: -55%;  /*绘制导航框倒三角*/
+}
+
+.circlebox1 {
+    position: fixed;
+    bottom: 8%;
+    left: 17%;
+}
+
+.circlebox2 {
+    position: fixed;
+    bottom: 24%;
+    left: 24%;
+}
+
+.circlebox3 {
+    position: fixed;
+    bottom: 33%;
+    left: 34%;
+}
+
+.circlebox4 {
+    position: fixed;
+    bottom: 36%;
+    left: 44%;
+}
+
+.circlebox5 {
+    position: fixed;
+    bottom: 33%;
+    left: 54%;
+}
+
+.circlebox6 {
+    position: fixed;
+    bottom: 24%;
+    left: 64%;
+}
+
+.circlebox7 {
+    position: fixed;
+    bottom: 8%;
+    left: 71%;
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: inline-block;
+    text-align: center;
+    opacity: 0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;/*绘制外圆*/
+}
+
+.smallcircle {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    top: 8px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    text-align: center;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;/*绘制内圆*/
+}
+
+/*.origin {
+    position: fixed;
+    bottom: -132%;
+    left: 170px;
+    width: 1200px;
+    height: 1200px;
+    border: 2px solid white;
+    -moz-border-radius: 600px;
+    -webkit-border-radius: 600px;
+    border-radius: 600px;
+}*/
+
+.circle img {
+    width: 67px;
+    height: 60px;
+    position: absolute;
+}
+
+.circle1 {
+    bottom: 0
+    left: 5%;
+    animation: spin1 1s linear;
+    animation-delay: 0s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle1 img {
+    left: 2px;
+    top: 5px;
+    transform: rotate(-50deg);
+}
+
+.circle2 {
+    top: 28%;
+    left: 6%;
+    animation: spin1 1s linear;
+    animation-delay: 0.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle2 img {
+    left: 8px;
+    top: 12px;
+    transform: rotate(-35deg);
+}
+
+.circle3 {
+    top: 15%;
+    left: 11%;
+    animation: spin1 1s linear;
+    animation-delay: 1s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle3 img {
+    left: 25px;
+    top: 8px;
+    width: 34px;
+    height: 65px;
+    transform: rotate(-50deg);
+}
+
+.circle4 {
+    top: 10%;
+    left: 18%;
+    animation: spin1 1s linear;
+    animation-delay: 1.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle4 img {
+    left: 6px;
+    top: 18px;
+    transform: rotate(0deg);
+}
+
+.circle5 {
+    top: 15%;
+    right: -24%;
+    animation: spin1 1s linear;
+    animation-delay: 2s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle5 img {
+    left: 8px;
+    top: 12px;
+    transform: rotate(18deg);
+}
+
+.circle6 {
+    top: 28%;
+    right: -28%;
+    animation: spin1 1s linear;
+    animation-delay: 2.5s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle6 img {
+    left: 12px;
+    top: 10px;
+    width: 52px;
+    height: 60px;
+    transform: rotate(35deg);
+}
+
+.circle7 {
+    top: 50%;
+    right: -30%;
+    animation: spin1 1s linear;
+    animation-delay: 3s;
+    /*定格在最后*/
+    animation-fill-mode: forwards;
+}
+
+.circle7 img {
+    width: 60px;
+    height: 65px;
+    left: 10px;
+    top: 9px;
+    transform: rotate(-35deg);
+}
+
+@-webkit-keyframes spin1 {
+    to {
+        opacity: 1
+    }
+}
+
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
