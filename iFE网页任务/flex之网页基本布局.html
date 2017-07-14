@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用flexbox制作基本布局</title>
+	<style>
+		body,html {
+			height: 100%;
+		}
+		body {
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+		}
+		header {
+			height: 15%;
+			background: green;
+		}
+		main {
+			display: flex;
+			justify-content: space-between;
+			height: 70%;
+			background: pink;
+		}
+		.left {
+			width: 30%;
+			background: white;
+			order: -1;
+
+		}
+		.middle {
+			width: 40%;
+			background: red;
+		}
+		.right {
+			width: 30%;
+			background: blue;
+		}
+		footer {
+			height: 15%;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="middle"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</main>
+	<footer></footer>
+</body>
+</html>
